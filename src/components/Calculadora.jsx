@@ -57,7 +57,7 @@ function Calculadora() {
         setResultado(resultadoOperacion);
 
      // Ordenar ascendente
-fetch('http://localhost:3500/v1/calculadora/ascendente', {
+fetch('https://calculadoraback.vercel.app/v1/calculadora/ascendente', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ numeros: [5, 2, 9, 1, 7] })
@@ -67,7 +67,7 @@ fetch('http://localhost:3500/v1/calculadora/ascendente', {
     .catch(error => console.error('Error:', error));
 
 // Ordenar descendente
-fetch('http://localhost:3500/v1/calculadora/descendente', {
+fetch('https://calculadoraback.vercel.app/v1/calculadora/descendente', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ numeros: [5, 2, 9, 1, 7] })
@@ -78,7 +78,7 @@ fetch('http://localhost:3500/v1/calculadora/descendente', {
  
 
         // Enviar los datos al backend
-        fetch(`http://localhost:3500/v1/calculadora/${operacion}`, {
+        fetch(`https://calculadoraback.vercel.app/v1/calculadora/${operacion}`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ A, B, C, D, E, F })
